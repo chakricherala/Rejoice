@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: NB;
+    src: url(./fonts/NBInternationalProBoo.ttf);
+}
+
+@font-face {
+    font-family: rj;
+    src: url(./fonts/Rejouice-Headline.ttf);
+}
