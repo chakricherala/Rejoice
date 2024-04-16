@@ -8,13 +8,13 @@ const Main = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (event) => {
-        setCursorPosition({ x: event.clientX, y: event.clientY });
+        setCursorPosition({ x: event.pageX, y: event.pageY });
     };
 
     useEffect(() => {
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
+    }, [cursorPosition]);
 
     useEffect(() => {
         gsap.to('#circle', {
@@ -25,7 +25,7 @@ const Main = () => {
     }, [cursorPosition]); // Re-run animation on cursorPosition change
 
     return (
-        <section className='w-full h-screen relative'>
+        <section data-scroll data-scroll-section className='w-full h-screen relative'>
             <div id='circle' className='w-[7vw] absolute -z-[1] h-[7vw] rounded-full bg-[#ff5f38] flex items-center justify-center -translate-y-1/2 -translate-x-1/2'>
                 Play Reel
             </div>
