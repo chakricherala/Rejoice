@@ -26,14 +26,14 @@ const Main = () => {
         });
     }, [cursorPosition]); 
     useGSAP(() => {
-        gsap.from(" .texth", {y: 360,duration: 1, 
-        delay: 0.5,});
+        gsap.from(" .texth", {y: 360,duration: 2, 
+        delay: 0.5, opacity: 0});
       
       }, {});
 
     return (
         <section data-scroll data-scroll-section className='w-full h-screen relative'>
-            <div id='circle' className='w-[7vw] absolute -z-[1] h-[7vw] text-[1.4vw] text-semibold rounded-full bg-[#ff5f38] flex items-center justify-center -translate-y-1/2 -translate-x-1/2'>
+            <div id='circle' className='w-[7vw] fixed -z-[1] h-[7vw] text-[1.4vw] text-semibold rounded-full bg-[#ff5f38] flex items-center justify-center -translate-y-1/2 -translate-x-1/2'>
                 Play Reel
             </div>
             <video autoPlay loop muted className="object-cover absolute -z-10 h-[100vh] w-[100vw]">

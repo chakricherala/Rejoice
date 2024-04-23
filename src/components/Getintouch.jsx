@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {gsap} from 'gsap';
+import {Linear, gsap} from 'gsap';
 import { useGSAP } from "@gsap/react";
 
 // Import Swiper styles
@@ -19,8 +19,8 @@ import { Woman, Charge, Electric, Friends, Goldring } from '../assets/index'
 
 const Getintouch = () => {
     useGSAP(() => {
-        gsap.from(".imflex", {y: 360,duration: 5, 
-        delay: 0.5,});
+        gsap.from(".imflex", {x: '100%',duration: 10, 
+         repeat: Infinity, ease: Linear});
       
       }, {});
     return (
@@ -32,13 +32,13 @@ const Getintouch = () => {
             <div>
                 <Swiper
                     spaceBetween={30}
-                    loop={true}
+                    // loop={true}
                     centeredSlides={true}
-                    autoplay={{
-                        duration: 2000,
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     duration: 2000,
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // }}
                     pagination={
                         false
                     }
@@ -46,7 +46,8 @@ const Getintouch = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    <SwiperSlide><div className=' imflex flex justify-evenly items-end'>
+                    <SwiperSlide>
+                    <div className=' imflex flex justify-evenly items-end'>
                         <img src={Woman} alt="" />
                         <img src={Charge} alt="" />
                         <img src={Electric} alt="" />
