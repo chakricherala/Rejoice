@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {gsap} from 'gsap';
+import { useGSAP } from "@gsap/react";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,6 +18,11 @@ import { Woman, Charge, Electric, Friends, Goldring } from '../assets/index'
 
 
 const Getintouch = () => {
+    useGSAP(() => {
+        gsap.from(".imflex", {y: 360,duration: 5, 
+        delay: 0.5,});
+      
+      }, {});
     return (
         <section data-scroll data-scroll-section className='w-full h-screen font-[NB] bg-[#FAF8F3] pt-6'>
             <div className='mx-6 flex justify-between items-end border-b-[1px] pb-2 border-black relative'>
@@ -39,7 +46,7 @@ const Getintouch = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    <SwiperSlide><div className='flex justify-evenly items-end'>
+                    <SwiperSlide><div className=' imflex flex justify-evenly items-end'>
                         <img src={Woman} alt="" />
                         <img src={Charge} alt="" />
                         <img src={Electric} alt="" />
@@ -48,7 +55,7 @@ const Getintouch = () => {
                     </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='flex justify-evenly items-end'>
+                        <div className=' imflex flex justify-evenly items-end'>
                             <img src={Woman} alt="" />
                             <img src={Charge} alt="" />
                             <img src={Electric} alt="" />
@@ -57,7 +64,7 @@ const Getintouch = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='flex justify-evenly items-end'>
+                        <div className=' imflex flex justify-evenly items-end'>
                             <img src={Woman} alt="" />
                             <img src={Charge} alt="" />
                             <img src={Electric} alt="" />

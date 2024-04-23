@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@gsap/react": "^2.1.0",
     "gsap": "^3.12.5",
     "locomotive": "^0.1.4",
     "locomotive-scroll": "^4.1.4",
