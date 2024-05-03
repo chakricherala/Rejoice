@@ -33,13 +33,13 @@ const Main = () => {
 
     return (
         <section data-scroll data-scroll-section className='w-full h-screen relative'>
-            <div id='circle' className='w-[7vw] fixed -z-[1] h-[7vw] text-[1.4vw] text-semibold rounded-full bg-[#ff5f38] flex items-center justify-center -translate-y-1/2 -translate-x-1/2'>
+            <div id='circle' className='w-[7vw] fixed -z-[1] h-[7vw] text-[1.4vw] text-semibold rounded-full bg-[#ff5f38] hidden md:flex items-center justify-center -translate-y-1/2 -translate-x-1/2'>
                 Play Reel
             </div>
             <video autoPlay loop muted className="object-cover absolute -z-10 h-[100vh] w-[100vw]">
                 <source src={mainVid} type="video/mp4" />
             </video>
-            <nav className='text-white text-lg flex justify-between px-10 py-6'>
+            <nav className='text-white text-[1.4vw] flex justify-between px-10 py-6'>
                 {navlinks.map((nav) => (
                     <a href="#" key={nav.id}>
                         {nav.title}

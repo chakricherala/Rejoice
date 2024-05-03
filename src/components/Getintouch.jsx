@@ -24,10 +24,10 @@ const Getintouch = () => {
       
       }, {});
     return (
-        <section data-scroll data-scroll-section className='w-full h-screen font-[NB] bg-[#FAF8F3] pt-6'>
+        <section data-scroll data-scroll-section className='w-full h-screen font-[NB] bg-[#FAF8F3] p-6'>
             <div className='mx-6 flex justify-between items-end border-b-[1px] pb-2 border-black relative'>
-                <h2 className='text-8xl tracking-tighter'>Get in touch.</h2>
-                <h4 className='text-xl'>↳ Contact</h4>
+                <h2 className='text-[5vw] tracking-tighter'>Get in touch.</h2>
+                <h4 className='text-[1.4vw]'>↳ Contact</h4>
             </div>
             <div>
                 <Swiper
@@ -78,10 +78,10 @@ const Getintouch = () => {
             </div>
             <div className='flex flex-col items-center mt-[16vh]'>
                 <div className='flex gap-4 items-center'>
-                    <h6>Agency & Venture</h6>
-                    <span className='rotate-[-90deg] text-lg'>↵</span>
+                    <h6 className='text-[1vw]'>Agency & Venture</h6>
+                    <span className='rotate-[-90deg] text-[0.8vw]'>↵</span>
                 </div>
-                <div className='underline underline-offset-4 text-5xl decoration-2 mt-2'>
+                <div className='underline underline-offset-4 text-[3vw] decoration-2'>
                     <h5>About Us</h5>
                 </div>
             </div>
